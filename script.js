@@ -122,8 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Bonus: Animation (already handled by CSS :hover on #animatedBox)
-    // You could add JS-triggered animation here if needed, e.g., on click:
+   
     const animatedBox = getEl('animatedBox');
     animatedBox.addEventListener('click', () => {
         animatedBox.style.transform = 'scale(0.8) rotate(-15deg)';
