@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Playground 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JavaScript Knowledge Practice. 🎉</h1>
+    <p>Turn boring web pages into dynamic, responsive, alive experiences.</p>
+
+    <!-- 1. Event Handling 🎈 -->
+    <section id="event-handling">
+        <h2>1. Event Handling 🎈</h2>
+        
+        <div class="event-item">
+            <button id="clickBtn">Click Me!</button>
+            <p id="clickResult">Result: Waiting for click...</p>
+        </div>
+
+        <div class="event-item">
+            <div id="hoverDiv">Hover Over Me to see changes</div>
+            <p id="hoverResult">Result: Waiting for hover...</p>
+        </div>
+
+        <div class="event-item">
+            <input type="text" id="keyInput" placeholder="Type here...">
+            <p id="keyResult">Last key pressed: </p>
+        </div>
+        
+        <div class="event-item bonus-item">
+            <button id="secretActionBtn">Try Click, Double Click, or Long Press!</button>
+            <p id="secretActionResult">Secret Action: Waiting...</p>
+        </div>
+    </section>
+    
+
+    <!-- 2. Interactive Elements 🎮 -->
+    <section id="interactive-elements">
+        <h2>2. Interactive Elements 🎮</h2>
+
+        <div class="interactive-item">
+            <button id="changeBtn">I'm Blue!</button>
+        </div>
+
+        <div class="interactive-item">
+            <h3>Image Gallery</h3>
+            <div class="gallery-container">
+                <button id="prevBtn" class="gallery-nav">< Prev</button>
+                <img id="galleryImage" src="https://picsum.photos/id/10/300/200" alt="Gallery Image">
+                <button id="nextBtn" class="gallery-nav">Next ></button>
+            </div>
+        </div>
+        
+        <div class="interactive-item">
+            <h3>Tabs</h3>
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="tab1">Tab 1</button>
+                    <button class="tab-button" data-tab="tab2">Tab 2</button>
+                    <button class="tab-button" data-tab="tab3">Tab 3</button>
+                </div>
+                <div class="tab-content-area">
+                    <div id="tab1" class="tab-content active">
+                        <h4>Content for Tab 1</h4>
+                        <p>This is the amazing content for the first tab. It's so engaging!</p>
+                    </div>
+                    <div id="tab2" class="tab-content">
+                        <h4>Content for Tab 2</h4>
+                        <p>Welcome to Tab 2! Discover different information here.</p>
+                    </div>
+                    <div id="tab3" class="tab-content">
+                        <h4>Content for Tab 3</h4>
+                        <p>Tab 3 brings even more exciting details to light. Explore!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="interactive-item bonus-item">
+            <h3>Bonus Animation</h3>
+            <div id="animatedBox">Animate Me!</div>
+        </div>
+    </section>
+
+    <!-- 3. Form Validation 📋 -->
+    <section id="form-validation">
+        <h2>3. Form Validation 📋</h2>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="fullName">Full Name (Required):</label>
+                <input type="text" id="fullName" name="fullName">
+                <span class="error-message" id="fullNameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email (Format: user@example.com):</label>
+                <input type="text" id="email" name="email">
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password (min 8 chars, 1 uppercase, 1 number):</label>
+                <input type="password" id="password" name="password">
+                <span class="error-message" id="passwordError"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword">
+                <span class="error-message" id="confirmPasswordError"></span>
+            </div>
+            <button type="submit">Submit Form</button>
+            <p id="formStatus"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>Thank You!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

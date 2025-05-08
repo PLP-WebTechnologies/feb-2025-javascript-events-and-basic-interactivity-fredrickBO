@@ -1,0 +1,181 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+h1 { text-align: center; margin-bottom: 30px; }
+h2 { border-bottom: 2px solid #007bff; padding-bottom: 5px; margin-top: 40px; }
+
+section {
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* For animation */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+button:active {
+    transform: scale(0.98); /* Click animation */
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Account for padding and border */
+}
+
+.event-item, .interactive-item, .form-group {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 3px solid #007bff;
+    background-color: #f9f9f9;
+}
+
+.bonus-item {
+    border-left: 3px solid #28a745; /* Green for bonus */
+}
+
+/* Event Handling */
+#hoverDiv {
+    width: 150px;
+    height: 50px;
+    background-color: #ffc107;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#hoverDiv.hovered {
+    background-color: #e0a800;
+    transform: scale(1.1);
+}
+
+/* Interactive Elements */
+#changeBtn.toggled {
+    background-color: #28a745; /* Green */
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#galleryImage {
+    max-width: 300px;
+    max-height: 200px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: opacity 0.5s ease-in-out; /* Image transition */
+}
+.gallery-nav {
+    background-color: #6c757d;
+}
+.gallery-nav:hover {
+    background-color: #5a6268;
+}
+
+.tab-container {
+    margin-top: 10px;
+}
+.tab-buttons button {
+    background-color: #e9ecef;
+    color: #495057;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.tab-buttons button.active {
+    background-color: #007bff;
+    color: white;
+}
+.tab-content-area {
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out; /* Tab content animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#animatedBox {
+    width: 100px;
+    height: 100px;
+    background-color: #dc3545;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.5s ease; /* Bounce and color change */
+}
+#animatedBox:hover {
+    transform: scale(1.2) rotate(15deg);
+    background-color: #c82333;
+}
+
+/* Form Validation */
+.form-group {
+    margin-bottom: 15px;
+}
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: block; /* To take up its own line */
+    min-height: 1.2em; /* Reserve space to prevent layout shifts */
+    margin-top: 3px;
+}
+input.invalid {
+    border-color: red;
+}
+input.valid {
+    border-color: green;
+}
+#formStatus {
+    margin-top: 10px;
+    font-weight: bold;
+}
+#formStatus.success {
+    color: green;
+}
+#formStatus.error {
+    color: red;
+}
